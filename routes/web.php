@@ -11,8 +11,18 @@
 |
 */
 
-Route::get('/', 'HomeController@home');
+Route::get('/', function(){
+    return view('adminlte.tgs.halpertama');
+});
 
 Route::get('/register', 'AuthController@form');
 
 Route::post('/welcome', 'AuthController@welcome');
+
+Route::get('/master', function(){
+    return view('adminlte.master');
+});
+
+Route::get('/data-tables', function(){
+    return view('adminlte.tgs.datatable');
+});
